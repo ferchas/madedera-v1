@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fff8e7; /* Cream for general background */
+  --foreground: #2b2b2b; /* Charcoal for text */
+  --card: #fff8e7; /* Cream for product cards */
+  --card-foreground: #2b2b2b; /* Charcoal for card text */
+  --popover: #fff8e7; /* Cream for popover backgrounds */
+  --popover-foreground: #2b2b2b; /* Charcoal for popover text */
+  --primary: #556b2f; /* Moss Green for primary actions */
+  --primary-foreground: #fff8e7; /* Cream for primary button text */
+  --secondary: #8b5e3c; /* Light Brown for secondary elements */
+  --secondary-foreground: #fff8e7; /* Cream for secondary text */
+  --muted: #f5f5dc; /* Light beige for muted elements */
+  --muted-foreground: #6b5b47; /* Darker brown for muted text */
+  --accent: #8b5e3c; /* Light Brown for accents */
+  --accent-foreground: #fff8e7; /* Cream for accent text */
+  --destructive: #8b4513; /* Saddle brown for destructive actions */
+  --destructive-foreground: #fff8e7; /* Cream for destructive text */
+  --border: #d2b48c; /* Tan for borders */
+  --input: #fff8e7; /* Cream for input fields */
+  --ring: #556b2f; /* Moss Green for focus ring */
+  --chart-1: #556b2f; /* Moss Green for charts */
+  --chart-2: #8b5e3c; /* Light Brown for charts */
+  --chart-3: #2b2b2b; /* Charcoal for charts */
+  --chart-4: #fff8e7; /* Cream for charts */
+  --chart-5: #d2b48c; /* Tan for charts */
+  --radius: 0.5rem; /* Rounded corners for elements */
+  --sidebar: #fff8e7; /* Cream for sidebar */
+  --sidebar-foreground: #2b2b2b; /* Charcoal for sidebar text */
+  --sidebar-primary: #556b2f; /* Moss Green for primary sidebar actions */
+  --sidebar-primary-foreground: #fff8e7; /* Cream for primary sidebar text */
+  --sidebar-accent: #8b5e3c; /* Light Brown for sidebar accents */
+  --sidebar-accent-foreground: #fff8e7; /* Cream for sidebar accent text */
+  --sidebar-border: #d2b48c; /* Tan for sidebar borders */
+  --sidebar-ring: #556b2f; /* Moss Green for sidebar focus */
+}
+
+.dark {
+  --background: #2b2b2b; /* Charcoal for dark background */
+  --foreground: #fff8e7; /* Cream for dark text */
+  --card: #3a3a3a; /* Dark gray for dark cards */
+  --card-foreground: #fff8e7; /* Cream for dark card text */
+  --popover: #3a3a3a; /* Dark gray for dark popover */
+  --popover-foreground: #fff8e7; /* Cream for dark popover text */
+  --primary: #6b7f3f; /* Lighter moss green for dark primary */
+  --primary-foreground: #fff8e7; /* Cream for dark primary text */
+  --secondary: #a0714f; /* Lighter brown for dark secondary */
+  --secondary-foreground: #fff8e7; /* Cream for dark secondary text */
+  --muted: #4a4a4a; /* Dark muted background */
+  --muted-foreground: #b8b8b8; /* Light gray for dark muted text */
+  --accent: #a0714f; /* Lighter brown for dark accents */
+  --accent-foreground: #fff8e7; /* Cream for dark accent text */
+  --destructive: #cd853f; /* Peru for dark destructive */
+  --destructive-foreground: #fff8e7; /* Cream for dark destructive text */
+  --border: #5a5a5a; /* Dark gray for dark borders */
+  --input: #3a3a3a; /* Dark gray for dark inputs */
+  --ring: #6b7f3f; /* Lighter moss green for dark focus ring */
+  --chart-1: #6b7f3f; /* Lighter moss green for dark charts */
+  --chart-2: #a0714f; /* Lighter brown for dark charts */
+  --chart-3: #fff8e7; /* Cream for dark charts */
+  --chart-4: #b8b8b8; /* Light gray for dark charts */
+  --chart-5: #8a8a8a; /* Medium gray for dark charts */
+  --sidebar: #2b2b2b; /* Charcoal for dark sidebar */
+  --sidebar-foreground: #fff8e7; /* Cream for dark sidebar text */
+  --sidebar-primary: #6b7f3f; /* Lighter moss green for dark sidebar primary */
+  --sidebar-primary-foreground: #fff8e7; /* Cream for dark sidebar primary text */
+  --sidebar-accent: #a0714f; /* Lighter brown for dark sidebar accents */
+  --sidebar-accent-foreground: #fff8e7; /* Cream for dark sidebar accent text */
+  --sidebar-border: #5a5a5a; /* Dark gray for dark sidebar borders */
+  --sidebar-ring: #6b7f3f; /* Lighter moss green for dark sidebar focus */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Custom wood texture background */
+.wood-texture {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D2B48C' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.wood-grain {
+  background-image: linear-gradient(90deg, transparent 50%, rgba(139, 94, 60, 0.05) 50%);
+  background-size: 4px 100%;
+}
